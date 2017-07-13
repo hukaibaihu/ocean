@@ -20,22 +20,20 @@ var sidebar = {
   }
 }, owlSlide = {
   init: function() {
-    if ($.fn.owlCarousel && $('.owl-carousel').length) {
-      $('.owl-carousel').owlCarousel({
-        items: 3,
-        lazyLoad: true,
-        loop: true,
-        margin: 15,
-        autoplay: true,
-        autoplayTimeout: 3000,
-        autoplayHoverPause: false,
-        responsive: {
-          0: {items: 1},
-          768: {items: 2},
-          992: {items: 3}
-        }
-      })
-    }
+    $('.owl-carousel').owlCarousel({
+      items: 3,
+      loop: true,
+      margin: 15,
+      dots: false,
+      lazyLoad: true,
+      autoplay: true,
+      autoplayTimeout: 3000,
+      responsive: {
+        0: {items: 1},
+        768: {items: 2},
+        992: {items: 3}
+      }
+    })
   }
 };
 
