@@ -13,6 +13,9 @@
 
     <!-- build:css styles/vendor.css -->
     <!-- bower:css -->
+    <link rel="stylesheet" href="/bower_components/animate.css/animate.css" />
+    <link rel="stylesheet" href="/bower_components/owl.carousel/dist/assets/owl.carousel.css" />
+    <link rel="stylesheet" href="/bower_components/owl.carousel/dist/assets/owl.theme.default.css" />
     <!-- endbower -->
     <!-- endbuild -->
 
@@ -23,58 +26,118 @@
     <!-- build:js scripts/vendor/modernizr.js -->
     <script src="/bower_components/modernizr/modernizr.js"></script>
     <!-- endbuild -->
+
+    <!-- [if lt IE 9]>
+      <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif] -->
   </head>
-  <body>
+  <body class="home">
     <!--[if IE]>
       <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
-    <div class="container">
-      <div class="header">
-        <ul class="nav nav-pills pull-right">
-          <li class="active">
-            <a href="#">Home</a>
-          </li>
-          <li>
-            <a href="#">About</a>
-          </li>
-          <li>
-            <a href="#">Contact</a>
-          </li>
-        </ul>
-        <h3 class="text-muted">Ocean Sixty</h3>
-      </div>
-
-      <div class="jumbotron">
-        <h1>'Allo, 'Allo!</h1>
-        <p class="lead">Always a pleasure scaffolding your apps.</p>
-        <p><a class="btn btn-lg btn-success" href="#">Splendid!</a></p>
-      </div>
-
-      <div class="row marketing">
-        <div class="col-lg-6">
-          <h4>HTML5 Boilerplate</h4>
-          <p>HTML5 Boilerplate is a professional front-end template for building fast, robust, and adaptable web apps or sites.</p>
-
-          <h4>Sass</h4>
-          <p>Sass is the most mature, stable, and powerful professional grade CSS extension language in the world.</p>
-
-          <h4>Bootstrap</h4>
-          <p>Sleek, intuitive, and powerful mobile first front-end framework for faster and easier web development.</p>
-
-          <h4>Modernizr</h4>
-          <p>Modernizr is an open-source JavaScript library that helps you build the next generation of HTML5 and CSS3-powered websites.</p>
+    <header class="header">
+      <div class="page-content">
+        <div class="container-fluid">
+          <a href="javascript:;" class="sidebar-toggle hidden-xs" role="button">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+          <p class="brand"><a href="index.html"><img src="images/logo.png"></a></p>
+          <!-- <a href="#" class="pull-right">EN</a> -->
+          <a href="#" class="pull-right">中文</a>
         </div>
       </div>
+    </header>
 
-      <div class="footer">
-        <p>♥ from the Yeoman team</p>
+    <section class="page-content">
+      <div class="owl-carousel owl-theme">
+        <div class="item">
+          <p class="slide-text"><span class="text-white">creation</span></p>
+          <img class="owl-lazy" data-src="images/banner1.jpg">
+        </div>
+        <div class="item">
+          <p class="slide-text"><span>ocean</span></p>
+          <img class="owl-lazy" data-src="images/banner2.jpg">
+        </div>
+        <div class="item">
+          <p class="slide-text"><span>is</span></p>
+          <img class="owl-lazy" data-src="images/banner3.jpg">
+        </div>
+        <div class="item">
+          <p class="slide-text"><span class="text-white">fun</span></p>
+          <img class="owl-lazy" data-src="images/banner4.jpg">
+        </div>
+        <div class="item">
+          <p class="slide-text"><span>blood</span></p>
+          <img class="owl-lazy" data-src="images/banner5.jpg">
+        </div>
+        <div class="item">
+          <p class="slide-text"><span>of</span></p>
+          <img class="owl-lazy" data-src="images/banner6.jpg">
+        </div>
       </div>
-    </div>
+      <!-- <div class="container-full">
+        <div class="swiper-container" style="height:100%;">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="slide-text"><p class="text-white">creation</p></div>
+              <img data-src="images/banner1.jpg" class="swiper-lazy">
+              <div class="swiper-lazy-preloader"></div>
+            </div>
+            <div class="swiper-slide">
+              <div class="slide-text"><p>ocean</p></div>
+              <img data-src="images/banner2.jpg" class="swiper-lazy">
+              <div class="swiper-lazy-preloader"></div>
+            </div>
+            <div class="swiper-slide">
+              <div class="slide-text"><p>is</p></div>
+              <img data-src="images/banner3.jpg" class="swiper-lazy">
+              <div class="swiper-lazy-preloader"></div>
+            </div>
+            <div class="swiper-slide">
+              <div class="slide-text"><p class="text-white">fun</p></div>
+              <img data-src="images/banner4.jpg" class="swiper-lazy">
+              <div class="swiper-lazy-preloader"></div>
+            </div>
+            <div class="swiper-slide">
+              <div class="slide-text"><p>blood</p></div>
+              <img data-src="images/banner5.jpg" class="swiper-lazy">
+              <div class="swiper-lazy-preloader"></div>
+            </div>
+            <div class="swiper-slide">
+              <div class="slide-text"><p class="text-white">of</p></div>
+              <img data-src="images/banner6.jpg" class="swiper-lazy">
+              <div class="swiper-lazy-preloader"></div>
+            </div>
+          </div>
+        </div>
+      </div> -->
+    </section>
+
+    <section class="sidebar">
+      <ul class="nav sidebar-nav">
+        <li><a href="about.html">about</a></li>
+        <li><a href="creative.html">creative content</a></li>
+        <li><a href="social.html">social media</a></li>
+        <li><a href="visual.html">visual improvement</a></li>
+        <li><a href="client.html">client</a></li>
+        <li><a href="contact.html">contact us</a></li>
+      </ul>
+    </section>
+
+    <footer class="footer">
+      <div class="container">
+        <p class="text-center">&copy; Copyright 2017</p>
+      </div>
+    </footer>
 
     <!-- build:js scripts/vendor.js -->
     <!-- bower:js -->
     <script src="/bower_components/jquery/dist/jquery.js"></script>
+    <script src="/bower_components/owl.carousel/dist/owl.carousel.js"></script>
     <script src="/bower_components/modernizr/modernizr.js"></script>
     <!-- endbower -->
     <!-- endbuild -->

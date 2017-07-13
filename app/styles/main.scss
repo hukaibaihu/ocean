@@ -3,6 +3,18 @@ $icon-font-path: '../fonts/';
 @import "bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
 // endbower
 
+body {
+  position: relative;
+  font-family: "Helvetica Neue", Helvetica, Arial, "PingFang SC", "Hiragino Sans GB", "Heiti SC", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+  color: #000;
+  background-color: #fff;
+  overflow-x: hidden;
+  overflow-y: auto;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
 .browserupgrade {
   margin: 0.2em 0;
   background: #ccc;
@@ -10,83 +22,112 @@ $icon-font-path: '../fonts/';
   padding: 0.2em 0;
 }
 
-/* Space out content a bit */
-body {
-  padding-top: 20px;
-  padding-bottom: 20px;
+a, a:hover, a:focus {
+  color: #000;
+}
+.text-white {
+  color: #fff;
+}
+.sidebar-toggle {
+  float: left;
+  display: inline-block;
+  margin-top: 30px;
+}
+.sidebar-toggle .icon-bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: #333;
+  margin: 4px 0;
+  transition: all .35s;
+}
+.sidebar-toggle.open .icon-bar:nth-child(1) {
+  transform-origin: right top;
+  transform: rotate(-39deg) translate(-3px, -3px);
+}
+.sidebar-toggle.open .icon-bar:nth-child(2) {
+  opacity: 0;
+}
+.sidebar-toggle.open .icon-bar:nth-child(3) {
+  transform-origin: right bottom;
+  transform: rotate(39deg) translate(-3px, 3px);
 }
 
-/* Everything but the jumbotron gets side spacing for mobile first views */
-.header,
-.marketing,
-.footer {
-  padding-right: 15px;
-  padding-left: 15px;
+.page-content {
+  position: relative;
 }
-
-/* Custom page header */
 .header {
-  padding-bottom: 20px;
-  border-bottom: 1px solid #e5e5e5;
-}
-
-/* Make the masthead heading the same height as the navigation */
-.header h3 {
-  margin-top: 0;
-  margin-bottom: 0;
-  line-height: 40px;
-}
-
-/* Custom page footer */
-.footer {
-  padding-top: 19px;
-  color: #777;
-  border-top: 1px solid #e5e5e5;
-}
-
-/* Customize container */
-@media (min-width: 768px) {
-  .container {
-    max-width: 730px;
-  }
-}
-.container-narrow > hr {
-  margin: 30px 0;
-}
-
-/* Main marketing message and sign up button */
-.jumbotron {
+  padding: 1em 0;
   text-align: center;
-  border-bottom: 1px solid #e5e5e5;
 }
-.jumbotron .btn {
-  padding: 14px 24px;
-  font-size: 21px;
+.brand img {
+  width: 75%;
 }
-
-/* Supporting marketing content */
-.marketing {
-  margin: 40px 0;
+.sidebar-nav {
+  margin: 50px 20px 20px;
 }
-.marketing p + h4 {
-  margin-top: 28px;
+.sidebar-nav>li>a,
+.sidebar-nav>li>a:hover,
+.sidebar-nav>li>a:focus {
+  font-size: 16px;
+  color: #333;
+  text-align: center;
+  text-transform: uppercase;
+  background-color: transparent;
 }
-
-/* Responsive: Portrait tablets and up */
-@media screen and (min-width: 768px) {
-  /* Remove the padding we set earlier */
-  .header,
-  .marketing,
-  .footer {
-    padding-right: 0;
-    padding-left: 0;
+.owl-carousel {
+  .slide-text {
+    display: block;
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    z-index: 10;
+    text-align: center;
+    font-size: 30px;
+    font-weight: 600;
+    color: #000;
+    text-transform: uppercase;
+    opacity: 0;
+    transition: opacity .35s ease-out;
+    transform: translateY(-50%);
   }
-  /* Space out the masthead */
-  .header {
-    margin-bottom: 30px;
+  .active .slide-text {
+    opacity: 1;
   }
-  /* Remove the bottom border on the jumbotron for visual effect */
-  .jumbotron {
-    border-bottom: 0;
+}
+.footer {
+  color: #979797;
+  line-height: 50px;
+  background-color: #fff;
+}
+.footer p {
+  margin: 0;
+  font-style: italic;
+}
+@media (min-width: 768px) {
+  .page-content {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  .owl-carousel .slide-text {
+    font-size: 40px;
+  }
+}
+@media (min-width: 992px) {
+  .page-content {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+  .owl-carousel .slide-text {
+    font-size: 50px;
+  }
+}
+@media (min-width: 1200px) {
+  .page-content {
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+  .owl-carousel .slide-text {
+    font-size: 70px;
   }
 }

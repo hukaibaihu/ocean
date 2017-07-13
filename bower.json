@@ -2,7 +2,10 @@
   "name": "desktop",
   "private": true,
   "dependencies": {
+    "animate.css": "^3.5.2",
+    "jquery": "~1.11.3",
     "bootstrap-sass": "~3.3.5",
+    "owl.carousel": "^2.2.1",
     "modernizr": "~2.8.1"
   },
   "overrides": {
