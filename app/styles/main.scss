@@ -365,6 +365,7 @@ a, a:hover, a:focus {
   .md-full {
     position: relative;
     height: calc(100vh - 150px);
+    overflow: hidden;
   }
   .slide-mask {
     position: fixed;
@@ -389,6 +390,9 @@ a, a:hover, a:focus {
       font-size: 30px;
     }
   }
+  .img-shan:hover {
+    animation: shan 1s ease-out;
+  }
 }
 @media (min-width: 1200px) {
   .page-content {
@@ -408,6 +412,7 @@ a, a:hover, a:focus {
     }
   }
   .line-text {
+    width: 1000px;
     .text,
     .text-append {
       font-size: 30px;
@@ -426,6 +431,9 @@ a, a:hover, a:focus {
     width: 1000px;
     margin-left: -500px;
   }
+  .sub-nav {
+    transform: translateY(100px);
+  }
 }
 @media (min-width: 1600px) {
   .owl-carousel .slide-text {
@@ -438,6 +446,7 @@ a, a:hover, a:focus {
     }
   }
   .line-text {
+    width: 1200px;
     .text,
     .text-append {
       font-size: 40px;
@@ -446,10 +455,21 @@ a, a:hover, a:focus {
       border-bottom-width: 6px;
     }
     .text-append {
-      margin-top: -15px;
+      margin-top: -12px;
     }
     .text-btm {
       font-size: 24px;
     }
+  }
+  .sub-nav {
+    transform: translateY(200px);
+  }
+}
+@keyframes shan {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }
