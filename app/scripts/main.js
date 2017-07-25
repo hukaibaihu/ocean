@@ -15,7 +15,10 @@ var sidebar = {
       lazyLoad: true,
       autoplay: true,
       animateIn: 'fadeIn',
-      animateOut: 'fadeOut'
+      animateOut: 'fadeOut',
+      onLoadedLazy: function(e) {
+        e.element.parent('.item').addClass('loaded')
+      }
     })
   }
 }, owlSlide = {
